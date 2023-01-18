@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, #49a09d, #5f2c82);
+
+}
+
+section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    width: 240px;
+    background: #fff;
+    text-align: center;
+    padding-bottom: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.295);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+
+}
+
+.img {
+    width: 100%;
+    height: 210px;
+    background: url('../img/metal.jpg') no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+section h1 {
+    padding: 10px 0;
+}
+
+section p {
+    font-size: .8em;
+    text-align: justify;
+    margin: 0 0 8px 0;
+}
+
+form {
+    margin: 8px;
+}
+
+form input {
+    width: 100%;
+    margin: 0 0 5px 0;
+}
+
+.button {
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.button-primary {
+    background: #49a09d;
+    color: #fff;
+}
+
+.button-primary:hover {
+    background: #3e8885;
+}
+
+.button-light {
+    background: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    border: 1px solid #49a09d;
+}
+
+.button-light span {
+    font-size: 1em;
+    margin-left: 5px;
+}
+
+.button-light:hover {
+    background: #5dccc8;
+}
+
+
+label {
+    position: relative;
+    display: block;
+    background: #5f2c82;
+    height: 40px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+label span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    color: #fff;
+}
+
+label input {
+    border: none;
+    width: 190px;
+    position: absolute;
+    top: 0;
+    left: 31px;
+    border-radius: 5px;
+    padding: 10px 0 10px 5px;
+    background: #5dccc8;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        width: 80%;
+        display: flex;
+        padding-bottom: 0;
+
+    }
+
+    .img {
+        width: 30%;
+        height: 280px;
+        background-position: center bottom;
+        background-size: cover;
+        border-radius: 20px 0 0 20px;
+    }
+
+    label input {
+        width: 93%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    section {
+        width: 960px;
+        height: 380px;
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    .img {
+        width: 50%;
+        height: 380px;
+        background-position: center bottom;
+        background-size: cover;
+        border-radius: 0 20px 20px 0;
+    }
+
+    form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    label input {
+        width: 92%;
+    }
+}
